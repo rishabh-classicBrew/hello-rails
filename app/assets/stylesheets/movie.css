@@ -69,3 +69,53 @@
   .new-movie a:hover {
     text-decoration: none; /* Ensure underline is not added on hover */
   }
+  .show-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .show-container p {
+    margin: 10px 0;
+  }
+  
+  .show-container .actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .show-container .actions a,
+  .show-container .actions button {
+    margin: 10px;   
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+  }
+  
+  .show-container .actions a:hover,
+  .show-container .actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .show-container .actions .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .show-container .actions .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .show-container .actions .btn-danger {
+    background-color: #dc3545;
+  }
+  
+  .show-container .actions .btn-danger:hover {
+    background-color: #c82333;
+  }

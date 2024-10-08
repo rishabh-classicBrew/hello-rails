@@ -7,10 +7,10 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
-      <th>Description</th>
+    <th><%= sortable "title", "Title" %></th>
+    <th><%= sortable "rating", "Rating" %></th>
+    <th><%= sortable "release_date", "Release Date" %></th>
+    <th><%= sortable "description", "Description" %></th>
     </tr>
   </thead>
   <tbody>
@@ -20,9 +20,10 @@
         <td><%= movie.rating %></td>
         <td><%= movie.release_date %></td>
         <td><%= movie.description %></td>
+        <td><%= link_to "Show this movie", movie_path(movie, sort: @sort_column, direction: @sort_direction) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<button class="new-movie"><%= link_to "New movie", new_movie_path %> </button>
+<button class="new-movie"><%= link_to "New movie", new_movie_path(sort: @sort_column, direction: @sort_direction) %> </button>

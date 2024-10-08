@@ -3,11 +3,14 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
+    @sort_column = params[:sort] || 'title'
+    @sort_direction = params[:direction] || 'asc'
+    @movies = Movie.order("#{@sort_column} #{@sort_direction}")
   end
 
   # GET /movies/1 or /movies/1.json
   def show
+    @movie = Movie.find(params[:id])
   end
 
   # GET /movies/new
@@ -25,7 +28,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       if @movie.save
-        format.html { redirect_to @movie, notice: "Movie was successfully created." }
+        format.html { redirect_to movies_path(sort: params[:sort], direction: params[:direction]), notice: "Movie was successfully created." }
         format.json { render :show, status: :created, location: @movie }
       else
         format.html { render :new, status: :unprocessable_entity }

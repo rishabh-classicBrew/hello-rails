@@ -9,16 +9,16 @@
 #   end
 
 movies = [
-  { title: 'The Shawshank Redemption', genre: 'Drama', release_year: 1994 },
-  { title: 'The Godfather', genre: 'Crime', release_year: 1972 },
-  { title: 'The Dark Knight', genre: 'Action', release_year: 2008 },
-  { title: 'Pulp Fiction', genre: 'Crime', release_year: 1994 },
-  { title: 'The Lord of the Rings: The Return of the King', genre: 'Fantasy', release_year: 2003 }
+  { title: 'The Shawshank Redemption', rating: 'U', release_date: '1988-04-16 00:00:00 UTC' },
+  { title: 'The Godfather', rating: 'A', release_date: '1988-04-16 00:00:00 UTC' },
+  { title: 'The Dark Knight', rating: 'U', release_date: '1988-04-16 00:00:00 UTC' },
+  { title: 'Pulp Fiction', rating: 'PG-13', release_date: '1988-04-16 00:00:00 UTC' },
+  { title: 'The Lord of the Rings: The Return of the King', rating: 'U', release_date: '1988-04-16 00:00:00 UTC' }
 ]
 
 movies.each do |movie|
   Movie.find_or_create_by!(title: movie[:title]) do |m|
-    m.genre = movie[:genre]
-    m.release_year = movie[:release_year]
+    m.rating = movie[:rating]
+    m.release_date = movie[:release_date]
   end
 end

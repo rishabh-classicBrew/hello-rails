@@ -12,26 +12,26 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-input" %>
   </div>
 
   <div>
-    <%= form.label :rating, style: "display: block" %>
-    <%= form.text_field :rating %>
+    <%= form.label :rating, class: "form-label" %>
+    <%= form.text_field :rating, class: "form-input" %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_field :description,class: "form-input" %>
   </div>
 
   <div>
-    <%= form.label :release_date, style: "display: block" %>
-    <%= form.text_field :release_date %>
+    <%= form.label :release_date, class: "form-label" %>
+    <%= form.text_field :release_date, class: "form-input" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit style: "margin: 4px; padding: 10px 20px; border: none; border-radius: 3px; background-color: black; color: white; cursor: pointer;" %>
   </div>
 <% end %>

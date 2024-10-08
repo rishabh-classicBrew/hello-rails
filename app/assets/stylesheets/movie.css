@@ -1,0 +1,71 @@
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  .form-container h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-container form div {
+    margin-bottom: 10px;
+  }
+  
+  .form-container form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container form input,
+  .form-container form select,
+  .form-container form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .form-container form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .form-container form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .back-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-link a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+  .new-movie {
+    background-color: #88ce8c;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+  }
+  .new-movie a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(0, 0, 0);
+  }
+  
+  .new-movie a:hover {
+    text-decoration: none; /* Ensure underline is not added on hover */
+  }

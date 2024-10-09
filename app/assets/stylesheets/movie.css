@@ -27,6 +27,18 @@
     width: 100%;
   }
   
+  .form-container form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .form-container form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
   
   .back-link {
     text-align: center;
@@ -42,7 +54,7 @@
     text-decoration: underline;
   }
   .new-movie {
-    background-color: #e5ff00;
+    background-color: #ffea00;
     border-radius: 5px;
     text-decoration: none;
     color: white;
@@ -83,30 +95,14 @@
     border-radius: 3px;
     text-decoration: none;
     color: white;
-    background-color: #007BFF;
+    background-color: #000000;
     cursor: pointer;
   }
   
-  .show-container .actions a:hover,
-  .show-container .actions button:hover {
-    background-color: #0056b3;
-  }
-  
   .show-container .actions .btn-secondary {
-    background-color: #6c757d;
+    background-color: #000000;
   }
   
-  .show-container .actions .btn-secondary:hover {
-    background-color: #5a6268;
-  }
-  
-  .show-container .actions .btn-danger {
-    background-color: #dc3545;
-  }
-  
-  .show-container .actions .btn-danger:hover {
-    background-color: #c82333;
-  }
   .edit-title {
     text-align: center;
     color: #333;
@@ -133,11 +129,11 @@
     border-radius: 3px;
     text-decoration: none;
     color: white;
-    background-color: #007BFF;
+    background-color: #000000;
     cursor: pointer;
   }
   
-  .edit-actions a:hover {
+  /* .edit-actions a:hover {
     background-color: #0056b3;
   }
   
@@ -147,7 +143,7 @@
   
   .edit-actions .btn-secondary:hover {
     background-color: #5a6268;
-  }
+  } */
   .form-group {
     margin-bottom: 15px;
   }

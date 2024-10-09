@@ -1,3 +1,8 @@
+<style>
+  .movie_heading {
+    background-color: #e5ff00;
+  }
+</style>
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Movies" %>
@@ -6,24 +11,25 @@
 
 <table>
   <thead>
-    <tr>
-    <th><%= sortable "title", "Title" %></th>
-    <th><%= sortable "rating", "Rating" %></th>
-    <th><%= sortable "release_date", "Release Date" %></th>
-    <th><%= sortable "description", "Description" %></th>
-    </tr>
+  <tr>
+    <th class="movie_heading"><%= sortable "title", "Title" %></th>
+    <th class="movie_heading"><%= sortable "rating", "Rating" %></th>
+    <th class="movie_heading"><%= sortable "release_date", "Release Date" %></th>
+    <th class="movie_heading"><%= sortable "description", "Description" %></th>
+    <th class="movie_heading">Action</th>
+  </tr>
   </thead>
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.title %></td>
-        <td><%= movie.rating %></td>
-        <td><%= movie.release_date %></td>
-        <td><%= movie.description %></td>
-        <td><%= link_to "Show this movie", movie_path(movie, sort: @sort_column, direction: @sort_direction) %></td>
+      <td style="<%= 'background-color: green' if params[:sort] == 'title' && params[:direction] == 'asc' %><%= 'background-color: red;' if params[:sort] == 'title' && params[:direction] == 'desc' %>"><%= movie.title %></td>
+      <td style="<%= 'background-color: green;' if params[:sort] == 'rating' && params[:direction] == 'asc' %><%= 'background-color: red;' if params[:sort] == 'rating' && params[:direction] == 'desc' %>"><%= movie.rating %></td>
+      <td style="<%= 'background-color: green;' if params[:sort] == 'release_date' && params[:direction] == 'asc' %><%= 'background-color: red;' if params[:sort] == 'release_date' && params[:direction] == 'desc' %>"><%= movie.release_date %></td>
+      <td style="<%= 'background-color: green;' if params[:sort] == 'description' && params[:direction] == 'asc' %><%= 'background-color: red;' if params[:sort] == 'description' && params[:direction] == 'desc' %>"><%= movie.description %></td>
+      <td><%= link_to "Show this movie", movie_path(movie, sort: params[:sort], direction: params[:direction]) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<button class="new-movie"><%= link_to "New movie", new_movie_path(sort: @sort_column, direction: @sort_direction) %> </button>
+<button class="new-movie"><%= link_to "New Movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %></button>
